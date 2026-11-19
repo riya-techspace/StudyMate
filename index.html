@@ -418,9 +418,16 @@
             <small>${task.date} at ${task.time}</small>
           </div>
 
-          <button onclick="toggleTask(${task.id})">
-            ${task.completed ? "Undo" : "Done"}
-          </button>
+          <span style="
+  color: ${task.completed ? '#16803c' : '#777'};
+  font-weight: bold;
+">
+  ${task.completed ? "Completed ✓" : "Not completed"}
+</span>
+
+<button onclick="toggleTask(${task.id})">
+  ${task.completed ? "Undo" : "Mark Complete"}
+</button>
 
           <button onclick="deleteTask(${task.id})">Delete</button>
         </div>
